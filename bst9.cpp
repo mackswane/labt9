@@ -102,13 +102,15 @@ return lcount(temp->left)+lcount(temp->right);
 }
 /////////////////////////////////////////////////////range search
 void rsearch(node *temp,int max,int min){
-  if(temp==NULL)
+  int n;
+     if(temp==NULL)
          return;
       rsearch(temp->left,max,min);
       if(temp->data>=min && temp->data<=max)
         cout<<"\t"<<temp->data;
       rsearch(temp->right,max,min);
-
+      n++;
+     cout<<"\n NO. of nodes between "<<min<<" and  "<<max<<" = "<<n;
 }
 };
 
